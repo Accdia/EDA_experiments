@@ -1,0 +1,11 @@
+vendor_name = ModelSim
+source_file = 1, C:/Users/X1 Carbon/Documents/Quartus/test1/rtl/test1.v
+source_file = 1, C:/Users/X1 Carbon/Documents/Quartus/test1/prj/db/test1.cbx.xml
+design_name = test1
+instance = comp, \c~output , c~output, test1, 1
+instance = comp, \out~output , out~output, test1, 1
+instance = comp, \in~input , in~input, test1, 1
+instance = comp, \b~input , b~input, test1, 1
+instance = comp, \a~input , a~input, test1, 1
+instance = comp, \Add1~0 , Add1~0, test1, 1
+instance = comp, \Add1~1 , Add1~1, test1, 1

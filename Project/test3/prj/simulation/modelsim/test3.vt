@@ -1,0 +1,27 @@
+`timescale 1 ns/ 1 ns
+module test3_vlg_tst();
+/*Make a reset that pulses once.*/
+reg reset=0;
+initial
+begin
+#2 reset = 1; //reset
+#3 reset = 0; //start count
+#24 reset = 1; //reset
+#2 reset = 0; //start count
+#48 reset = 1; //reset
+#1 reset = 0; //start count
+#60 reset = 1; //reset
+#3 reset = 0; //start count
+#100 $stop;
+end
+/*Make a regular pulsing closk*/
+parameter clk_period = 4;
+reg clk;
+initial
+clk = 0;
+always #(clk_period/2)
+clk = ~clk;
+wire[3:0] out;
+test3 i1 (.clk(clk),.out(out),.reset(reset));
+
+endmodule

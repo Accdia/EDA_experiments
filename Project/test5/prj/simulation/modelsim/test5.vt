@@ -1,0 +1,37 @@
+`timescale 1 ps/ 1 ps
+module test5_vlg_tst();
+reg [7:0] a;
+reg [7:0] b;
+reg clk;
+reg cr;
+                                            
+wire [15:0]  f;
+                        
+test5 i1 (
+	.a(a),
+	.b(b),
+	.clk(clk),
+	.cr(cr),
+	.f(f)
+);
+initial                                                
+begin                                                                       
+a=8'b00000010;b=8'b00000010;
+cr=0;
+#4 cr=1;
+#4 a=8'b00001100;b=8'b00000011;
+#4 a=8'b00011010;b=8'b00001110;
+#4 a=8'b00010110;b=8'b00010101;
+#4 a=8'b00011111;b=8'b00000000;
+#4 a=8'b00101010;b=8'b01110010;
+#4 $stop;				                                           
+$display("Running testbench");                       
+end
+parameter clk_period=4;
+initial
+begin
+clk=0;
+forever
+#(clk_period/2)clk=~clk;
+end																		                                       
+endmodule 

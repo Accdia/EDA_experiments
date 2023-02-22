@@ -1,0 +1,63 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/X1 Carbon/Documents/Quartus/Project/test1/prj/simulation/modelsim
+T_opt
+Z1 !s110 1638340285
+V1z_8f^a[g:=E:4N<UE7J=1
+04 13 4 work test1_vlg_tst fast 0
+=1-8c16452d9f9a-61a716bd-289-3038
+o-quiet -auto_acc_if_foreign -work work -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneiv_hssi_ver -L cycloneiv_pcie_hip_ver -L cycloneiv_ver -L rtl_work -L work +acc
+Z2 tCvgOpt 0
+n@_opt
+OL;O;10.5;63
+vtest1
+R1
+!i10b 1
+!s100 <[AIE_3@PNXY2Y6G5e@z=0
+Ih]iABYm?B6IaAb[Y]^H?e1
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1637292788
+8C:/Users/X1 Carbon/Documents/Quartus/Project/test1/rtl/test1.v
+FC:/Users/X1 Carbon/Documents/Quartus/Project/test1/rtl/test1.v
+L0 1
+Z4 OL;L;10.5;63
+r1
+!s85 0
+31
+Z5 !s108 1638340285.000000
+!s107 C:/Users/X1 Carbon/Documents/Quartus/Project/test1/rtl/test1.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/X1 Carbon/Documents/Quartus/Project/test1/rtl|C:/Users/X1 Carbon/Documents/Quartus/Project/test1/rtl/test1.v|
+!i113 0
+Z6 o-vlog01compat -work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+!s92 -vlog01compat -work work {+incdir+C:/Users/X1 Carbon/Documents/Quartus/Project/test1/rtl} -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R2
+vtest1_vlg_tst
+R1
+!i10b 1
+!s100 cN8JG>Fb]Uh3^Vn3zPUUX2
+IhiIHNRQAM`JbD3YzNQQ9]3
+R3
+R0
+w1637299716
+8C:/Users/X1 Carbon/Documents/Quartus/Project/test1/prj/simulation/modelsim/test1.vt
+FC:/Users/X1 Carbon/Documents/Quartus/Project/test1/prj/simulation/modelsim/test1.vt
+L0 28
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/X1 Carbon/Documents/Quartus/Project/test1/prj/simulation/modelsim/test1.vt|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/X1 Carbon/Documents/Quartus/Project/test1/prj/simulation/modelsim|C:/Users/X1 Carbon/Documents/Quartus/Project/test1/prj/simulation/modelsim/test1.vt|
+!i113 0
+R6
+!s92 -vlog01compat -work work {+incdir+C:/Users/X1 Carbon/Documents/Quartus/Project/test1/prj/simulation/modelsim} -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R2

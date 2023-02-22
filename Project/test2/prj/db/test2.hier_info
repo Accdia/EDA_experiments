@@ -1,0 +1,140 @@
+|test2
+Sum[0] << fulladder:UO.port0
+Sum[1] << fulladder:U1.port0
+Sum[2] << fulladder:U2.port0
+Sum[3] << fulladder:U3.port0
+Sum[4] << fulladder:U4.port0
+Sum[5] << fulladder:U5.port0
+Sum[6] << fulladder:U6.port0
+Sum[7] << fulladder:U7.port0
+Co[0] << Co[0].DB_MAX_OUTPUT_PORT_TYPE
+Co[1] << Co[1].DB_MAX_OUTPUT_PORT_TYPE
+Co[2] << Co[2].DB_MAX_OUTPUT_PORT_TYPE
+Co[3] << Co[3].DB_MAX_OUTPUT_PORT_TYPE
+Co[4] << Co[4].DB_MAX_OUTPUT_PORT_TYPE
+Co[5] << Co[5].DB_MAX_OUTPUT_PORT_TYPE
+Co[6] << Co[6].DB_MAX_OUTPUT_PORT_TYPE
+Co[7] << fulladder:U7.port1
+A[0] => A[0].IN1
+A[1] => A[1].IN1
+A[2] => A[2].IN1
+A[3] => A[3].IN1
+A[4] => A[4].IN1
+A[5] => A[5].IN1
+A[6] => A[6].IN1
+A[7] => A[7].IN1
+B[0] => B[0].IN1
+B[1] => B[1].IN1
+B[2] => B[2].IN1
+B[3] => B[3].IN1
+B[4] => B[4].IN1
+B[5] => B[5].IN1
+B[6] => B[6].IN1
+B[7] => B[7].IN1
+Ci => Ci.IN1
+
+
+|test2|fulladder:UO
+Sum <= WideXor0.DB_MAX_OUTPUT_PORT_TYPE
+Co <= comb.DB_MAX_OUTPUT_PORT_TYPE
+A => WideXor0.IN0
+A => S1.IN0
+A => S2.IN0
+B => WideXor0.IN1
+B => S1.IN1
+B => S2.IN1
+Ci => WideXor0.IN2
+Ci => S3.IN1
+
+
+|test2|fulladder:U1
+Sum <= WideXor0.DB_MAX_OUTPUT_PORT_TYPE
+Co <= comb.DB_MAX_OUTPUT_PORT_TYPE
+A => WideXor0.IN0
+A => S1.IN0
+A => S2.IN0
+B => WideXor0.IN1
+B => S1.IN1
+B => S2.IN1
+Ci => WideXor0.IN2
+Ci => S3.IN1
+
+
+|test2|fulladder:U2
+Sum <= WideXor0.DB_MAX_OUTPUT_PORT_TYPE
+Co <= comb.DB_MAX_OUTPUT_PORT_TYPE
+A => WideXor0.IN0
+A => S1.IN0
+A => S2.IN0
+B => WideXor0.IN1
+B => S1.IN1
+B => S2.IN1
+Ci => WideXor0.IN2
+Ci => S3.IN1
+
+
+|test2|fulladder:U3
+Sum <= WideXor0.DB_MAX_OUTPUT_PORT_TYPE
+Co <= comb.DB_MAX_OUTPUT_PORT_TYPE
+A => WideXor0.IN0
+A => S1.IN0
+A => S2.IN0
+B => WideXor0.IN1
+B => S1.IN1
+B => S2.IN1
+Ci => WideXor0.IN2
+Ci => S3.IN1
+
+
+|test2|fulladder:U4
+Sum <= WideXor0.DB_MAX_OUTPUT_PORT_TYPE
+Co <= comb.DB_MAX_OUTPUT_PORT_TYPE
+A => WideXor0.IN0
+A => S1.IN0
+A => S2.IN0
+B => WideXor0.IN1
+B => S1.IN1
+B => S2.IN1
+Ci => WideXor0.IN2
+Ci => S3.IN1
+
+
+|test2|fulladder:U5
+Sum <= WideXor0.DB_MAX_OUTPUT_PORT_TYPE
+Co <= comb.DB_MAX_OUTPUT_PORT_TYPE
+A => WideXor0.IN0
+A => S1.IN0
+A => S2.IN0
+B => WideXor0.IN1
+B => S1.IN1
+B => S2.IN1
+Ci => WideXor0.IN2
+Ci => S3.IN1
+
+
+|test2|fulladder:U6
+Sum <= WideXor0.DB_MAX_OUTPUT_PORT_TYPE
+Co <= comb.DB_MAX_OUTPUT_PORT_TYPE
+A => WideXor0.IN0
+A => S1.IN0
+A => S2.IN0
+B => WideXor0.IN1
+B => S1.IN1
+B => S2.IN1
+Ci => WideXor0.IN2
+Ci => S3.IN1
+
+
+|test2|fulladder:U7
+Sum <= WideXor0.DB_MAX_OUTPUT_PORT_TYPE
+Co <= comb.DB_MAX_OUTPUT_PORT_TYPE
+A => WideXor0.IN0
+A => S1.IN0
+A => S2.IN0
+B => WideXor0.IN1
+B => S1.IN1
+B => S2.IN1
+Ci => WideXor0.IN2
+Ci => S3.IN1
+
+

@@ -1,0 +1,171 @@
+// Copyright (C) 1991-2013 Altera Corporation
+// Your use of Altera Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Altera Program License 
+// Subscription Agreement, Altera MegaCore Function License 
+// Agreement, or other applicable license agreement, including, 
+// without limitation, that your use is for the sole purpose of 
+// programming logic devices manufactured by Altera and sold by 
+// Altera or its authorized distributors.  Please refer to the 
+// applicable agreement for further details.
+
+// VENDOR "Altera"
+// PROGRAM "Quartus II 64-Bit"
+// VERSION "Version 13.1.0 Build 162 10/23/2013 SJ Full Version"
+
+// DATE "11/17/2021 15:43:21"
+
+// 
+// Device: Altera EP4CGX15BF14C6 Package FBGA169
+// 
+
+// 
+// This Verilog file should be used for ModelSim (Verilog) only
+// 
+
+`timescale 1 ps/ 1 ps
+
+module test (
+	Q,
+	Qnot,
+	J,
+	K,
+	CP);
+output 	Q;
+output 	Qnot;
+input 	J;
+input 	K;
+input 	CP;
+
+// Design Ports Information
+// Q	=>  Location: PIN_M4,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// Qnot	=>  Location: PIN_L4,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// J	=>  Location: PIN_M6,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// K	=>  Location: PIN_L5,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// CP	=>  Location: PIN_N6,	 I/O Standard: 2.5 V,	 Current Strength: Default
+
+
+wire gnd;
+wire vcc;
+wire unknown;
+
+assign gnd = 1'b0;
+assign vcc = 1'b1;
+assign unknown = 1'bx;
+
+tri1 devclrn;
+tri1 devpor;
+tri1 devoe;
+// synopsys translate_off
+initial $sdf_annotate("test_v.sdo");
+// synopsys translate_on
+
+wire \Q~output_o ;
+wire \Qnot~output_o ;
+wire \CP~input_o ;
+wire \J~input_o ;
+wire \K~input_o ;
+wire \Mux0~0_combout ;
+wire \Q~reg0_q ;
+
+
+// Location: IOOBUF_X8_Y0_N2
+cycloneiv_io_obuf \Q~output (
+	.i(\Q~reg0_q ),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\Q~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \Q~output .bus_hold = "false";
+defparam \Q~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X8_Y0_N9
+cycloneiv_io_obuf \Qnot~output (
+	.i(!\Q~reg0_q ),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\Qnot~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \Qnot~output .bus_hold = "false";
+defparam \Qnot~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOIBUF_X12_Y0_N1
+cycloneiv_io_ibuf \CP~input (
+	.i(CP),
+	.ibar(gnd),
+	.o(\CP~input_o ));
+// synopsys translate_off
+defparam \CP~input .bus_hold = "false";
+defparam \CP~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X12_Y0_N8
+cycloneiv_io_ibuf \J~input (
+	.i(J),
+	.ibar(gnd),
+	.o(\J~input_o ));
+// synopsys translate_off
+defparam \J~input .bus_hold = "false";
+defparam \J~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X14_Y0_N8
+cycloneiv_io_ibuf \K~input (
+	.i(K),
+	.ibar(gnd),
+	.o(\K~input_o ));
+// synopsys translate_off
+defparam \K~input .bus_hold = "false";
+defparam \K~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: LCCOMB_X13_Y1_N28
+cycloneiv_lcell_comb \Mux0~0 (
+// Equation(s):
+// \Mux0~0_combout  = (\Q~reg0_q  & ((!\K~input_o ))) # (!\Q~reg0_q  & (\J~input_o ))
+
+	.dataa(\J~input_o ),
+	.datab(gnd),
+	.datac(\Q~reg0_q ),
+	.datad(\K~input_o ),
+	.cin(gnd),
+	.combout(\Mux0~0_combout ),
+	.cout());
+// synopsys translate_off
+defparam \Mux0~0 .lut_mask = 16'h0AFA;
+defparam \Mux0~0 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: FF_X13_Y1_N29
+dffeas \Q~reg0 (
+	.clk(!\CP~input_o ),
+	.d(\Mux0~0_combout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\Q~reg0_q ),
+	.prn(vcc));
+// synopsys translate_off
+defparam \Q~reg0 .is_wysiwyg = "true";
+defparam \Q~reg0 .power_up = "low";
+// synopsys translate_on
+
+assign Q = \Q~output_o ;
+
+assign Qnot = \Qnot~output_o ;
+
+endmodule

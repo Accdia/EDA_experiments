@@ -1,0 +1,38 @@
+module test2();
+	
+	reg[7:0] a,b;
+	reg cin;
+	wire[7:0] sum;
+	wire cout;
+
+
+	initial
+	
+		begin
+			#400 $finish;
+		end
+	
+
+	initial 
+	
+
+		begin
+			a=255;
+			b=0;
+			cin=0;
+			
+			forever 
+				begin
+					#5 a=a-3;b=b+1;
+				end
+	
+		end
+	
+	adder_8bit U1(
+		      .a(a),
+			  .b(b),
+			  .cin(cin),
+			  .sum(sum),
+			  .cout(cout)
+		     );
+endmodule

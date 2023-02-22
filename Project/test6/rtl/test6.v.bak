@@ -1,0 +1,6 @@
+module test6(a,b)
+input a[7:0];
+output b[7:0];
+wire [7:0]a,b;
+assign a=b;
+endmodule 

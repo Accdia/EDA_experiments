@@ -1,0 +1,74 @@
+// Copyright (C) 1991-2013 Altera Corporation
+// Your use of Altera Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Altera Program License 
+// Subscription Agreement, Altera MegaCore Function License 
+// Agreement, or other applicable license agreement, including, 
+// without limitation, that your use is for the sole purpose of 
+// programming logic devices manufactured by Altera and sold by 
+// Altera or its authorized distributors.  Please refer to the 
+// applicable agreement for further details.
+
+// *****************************************************************************
+// This file contains a Verilog test bench template that is freely editable to  
+// suit user's needs .Comments are provided in each section to help the user    
+// fill out necessary details.                                                  
+// *****************************************************************************
+// Generated on "11/26/2021 13:50:25"
+                                                                                
+// Verilog Test Bench template for design : test2
+// 
+// Simulation tool : ModelSim (Verilog)
+// 
+
+`timescale 1 ps/ 1 ps
+module test2_vlg_tst();
+// constants                                           
+// general purpose registers
+reg eachvec;
+// test vector input registers
+reg [7:0] A;
+reg [7:0] B;
+reg Ci;
+// wires                                               
+wire [7:0]  Co;
+wire [7:0]  Sum;
+
+// assign statements (if any)                          
+test2 i1 (
+// port map - connection between master ports and signals/registers   
+	.A(A),
+	.B(B),
+	.Ci(Ci),
+	.Co(Co),
+	.Sum(Sum)
+);
+initial                                                
+begin                                                  
+// code that executes only once                        
+// insert code here --> begin                          
+	   A = 8'b0000_0000; B = 8'b0000_0000; Ci = 1'b0; //0+0=0 
+		#100 A = 8'b0000_0001; B = 8'b0000_0001; Ci = 1'b1; //1+1+1=3 
+		#100 A = 8'b0010_0000; B = 8'b0010_0011; Ci = 1'b1; //32+35+1=68
+		#100 A = 8'b1111_1100; B = 8'b0000_0011; Ci = 1'b0; //252+3+0=255
+		#100 A = 8'b1111_1100; B = 8'b0000_0011; Ci = 1'b1; //252+3+1=256
+		#100 A = 8'b1111_1100; B = 8'b0000_1000; Ci = 1'b0; //252+8+0=260
+		#500 $stop;                                 
+// --> end                                             
+$display("Running testbench");                       
+end                                                    
+//always                                                 
+// optional sensitivity list                           
+// @(event1 or event2 or .... eventn)                  
+//begin                                                  
+// code executes for every event on sensitivity list   
+// insert code here --> begin                          
+                                                       
+//@eachvec;                                              
+// --> end                                             
+//end                                                    
+endmodule
+

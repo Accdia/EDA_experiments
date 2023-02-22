@@ -1,0 +1,8 @@
+|test1
+a => Add0.IN1
+b => Add0.IN2
+in => Add1.IN4
+c << Add1.DB_MAX_OUTPUT_PORT_TYPE
+out << Add1.DB_MAX_OUTPUT_PORT_TYPE
+
+
